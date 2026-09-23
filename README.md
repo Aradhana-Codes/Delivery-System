@@ -1,7 +1,7 @@
 # Mystry Delivery System
 
 A Python-based delivery simulation system developed for a fictional delivery company called
-**FastBox** to assign packages to the nearest delivery agent, simulate package deliveries, calculate travel distances, and produce a report showing which packages were delivered, total distancetraveled by each agent, and the most efficient agent.
+**FastBox** to assign packages to the nearest delivery agent, simulate package deliveries, calculate travel distances, and produce a report showing which packages were delivered, total distance traveled by each agent, and the most efficient agent.
 
 The system uses **Euclidean distance** to assign packages to agents based on the distance between the agent's starting location and the package's warehouse.
 
@@ -21,7 +21,7 @@ The objective of this project is to build a system that can:
 - Identify the best-performing agent.
 - Generate a structured JSON report.
 
-This project demonstrates practical applications of **Python programming, data validation, distance calculation, algorithmic assignment, and simulation**.
+This project demonstrates practical applications of Python programming, data validation, distance calculation, algorithmic assignment, and simulation.
 --
 
 ## Features
@@ -36,24 +36,15 @@ This project demonstrates practical applications of **Python programming, data v
 ### 2. Nearest Agent Assignment
 
 Each package is assigned to the nearest agent based on the Euclidean distance between:
-
-```text
-Agent's starting location → Package warehouse
-```
+- Agent's starting location → Package warehouse
 
 If two agents have the same distance, a deterministic tie-breaking rule is used based on the agent ID.
 
 ### 3. Delivery Simulation
 
-The system simulates the delivery journey for every assigned package:
+The system simulates the delivery journey for every assigned package:\
+ Agent's Current Location -> Package Warehouse -> Destination
 
-```text
-Agent's Current Location
-          ↓
-Package Warehouse
-          ↓
-Package Destination
-```
 
 After delivering a package, the agent's current location is updated to the destination of that package.
 
