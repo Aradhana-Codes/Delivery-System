@@ -22,7 +22,7 @@ The objective of this project is to build a system that can:
 - Generate a structured JSON report.
 
 This project demonstrates practical applications of Python programming, data validation, distance calculation, algorithmic assignment, and simulation.
---
+
 
 ## Features
 
@@ -86,17 +86,17 @@ The system validates:
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
 | JSON | Input and output data format |
-| `math` | Euclidean distance calculations |
-| `sys` | Command-line argument handling |
-| `pathlib` | File path management |
+| math | Euclidean distance calculations |
+| sys | Command-line argument handling |
+| pathlib | File path management |
 
-## 📥 Input Data Format
+## Input Data Format
 
 The system accepts JSON data containing warehouses, agents, and packages.
 
@@ -196,7 +196,7 @@ Each package contains:
 ---
 
 
-## 📤 Output
+## Output
 
 The system generates a JSON report containing delivery performance and route information.
 
@@ -256,32 +256,22 @@ The total number of packages successfully delivered by an agent.
 
 ### Total Distance
 
-The sum of all distances traveled by the agent while collecting and delivering packages.
+The sum of all distances traveled by the agent while collecting and delivering packages.\
+Total Distance = Sum of all package delivery distances
 
-```text
-Total Distance =
-Sum of all package delivery distances
-```
 
 ### Efficiency
 
-The average distance traveled per delivered package.
-
-```text
-Efficiency =
-Total Distance / Number of Packages Delivered
-```
+The average distance traveled per delivered package.\
+Efficiency = Total Distance / Number of Packages Delivered \
 
 A lower efficiency value indicates a lower average travel distance per delivered package. The report uses this metric when identifying the best-performing agent.
 
----
 ### Validation Check
 
-The system verifies that:
+The system verifies that:\
+Total Delivered Packages = Total Input Packages \
 
-```text
-Total Delivered Packages = Total Input Packages
-```
 This helps ensure that no package is lost during assignment or simulation.
 
 ---
@@ -300,7 +290,7 @@ The simulation follows these assumptions:
 8. Travel time, traffic, and delivery delays are not included.
 9. Warehouse locations and destinations are represented using two-dimensional coordinates.
 
----
+
 
 ## Possible Future Improvements
 
@@ -317,7 +307,7 @@ Possible future improvements include:
 - CSV export for performance reports.
 - A web dashboard for delivery monitoring.
 
----
+
 
 ##  Learning Outcomes
 
