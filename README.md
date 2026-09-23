@@ -169,13 +169,12 @@ The simulation follows these assumptions:
 2. Each package is assigned to exactly one agent.
 3. Assignment is based on the distance from the agent's original location to the package warehouse.
 4. Agents collect and deliver their assigned packages sequentially.
-5. Agents travel directly between locations.
+5. After delivery, an agent's current location becomes the package destination.
 6. Euclidean distance is used.
-7. Package delivery order follows the order in which packages are assigned.
-8. Travel time, traffic, and delivery delays are not included.
-9. Warehouse locations and destinations are represented using two-dimensional coordinates.
-
-
+7. If two agents have equal distances, the agent with the smaller ID is selected.
+8. Package delivery order follows the order in which packages are assigned.
+9. Agents with zero packages have null efficiency and are excluded from best-agent selection.
+10. Travel time, traffic, and delivery delays are not included.
 
 ## Possible Future Improvements
 
