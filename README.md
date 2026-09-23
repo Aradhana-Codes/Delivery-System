@@ -5,7 +5,6 @@ A Python-based delivery simulation system developed for a fictional delivery com
 
 The system uses **Euclidean distance** to assign packages to agents based on the distance between the agent's starting location and the package's warehouse.
 
----
 
 ## Project Overview
 
@@ -65,11 +64,10 @@ The system records the route for every package, including:
 ### 5. Performance Report
 
 The generated report contains:
-
 - Number of packages delivered by each agent
+- Ids of delivered packages by each agent
 - Total distance traveled
 - Average distance per delivered package
-- Route details
 - Best-performing agent based on delivery efficiency
 
 ### 6. Data Validation
@@ -83,8 +81,6 @@ The system validates:
 - Package destinations
 - Warehouse references
 - Total number of delivered packages
-
----
 
 ## Technologies Used
 
@@ -100,73 +96,15 @@ The system validates:
 
 The system accepts JSON data containing warehouses, agents, and packages.
 
-### Example Input
-
-```json
-{
-    "warehouses": {
-        "W1": [0, 0],
-        "W2": [50, 75],
-        "W3": [100, 25]
-    },
-    "agents": [
-        {
-            "id": "A1",
-            "location": [5, 5]
-        },
-        {
-            "id": "A2",
-            "location": [60, 60]
-        },
-        {
-            "id": "A3",
-            "location": [95, 30]
-        }
-    ],
-    "packages": [
-        {
-            "id": "P1",
-            "warehouse": "W1",
-            "destination": [30, 40]
-        },
-        {
-            "id": "P2",
-            "warehouse": "W2",
-            "destination": [70, 90]
-        },
-        {
-            "id": "P3",
-            "warehouse": "W3",
-            "destination": [105, 20]
-        },
-        {
-            "id": "P4",
-            "warehouse": "W1",
-            "destination": [10, 10]
-        },
-        {
-            "id": "P5",
-            "warehouse": "W2",
-            "destination": [40, 80]
-        }
-    ]
-}
-```
-
 ### Input Components
-
 #### Warehouses
 
-Each warehouse contains a unique ID and its two-dimensional coordinates.
-
-```json
+Each warehouse contains a unique ID and its two-dimensional coordinates.\
 "W1": [0, 0]
-```
 
 #### Agents
 
 Each agent contains:
-
 - A unique agent ID
 - An initial location
 
@@ -178,7 +116,6 @@ Each agent contains:
 ```
 
 #### Packages
-
 Each package contains:
 
 - A unique package ID
@@ -193,60 +130,9 @@ Each package contains:
 }
 ```
 
----
-
 
 ## Output
-
 The system generates a JSON report containing delivery performance and route information.
-
-### Example Output Structure
-
-```json
-{
-    
-    "A1": {
-        "packages_delivered": 6,
-        "delivered_package_ids": [
-            "P1",
-            "P2",
-            "P3",
-            "P4",
-            "P6",
-            "P7"
-        ],
-        "total_distance": 164.66,
-        "efficiency": 27.44
-    },
-    "A2": {
-        "packages_delivered": 0,
-        "delivered_package_ids": [],
-        "total_distance": 0.0,
-        "efficiency": 0.0
-    },
-    "A3": {
-        "packages_delivered": 2,
-        "delivered_package_ids": [
-            "P5",
-            "P8"
-        ],
-        "total_distance": 25.4,
-        "efficiency": 12.7
-    },
-    "A4": {
-        "packages_delivered": 0,
-        "delivered_package_ids": [],
-        "total_distance": 0.0,
-        "efficiency": 0.0
-    },
-    "best_agent": "A3"
-
-}
-```
-
-> The values above are illustrative. The actual output is calculated from the input data.
-
----
 
 ##  Performance Metrics
 
@@ -263,18 +149,17 @@ Total Distance = Sum of all package delivery distances
 ### Efficiency
 
 The average distance traveled per delivered package.\
-Efficiency = Total Distance / Number of Packages Delivered \
+Efficiency = Total Distance / Number of Packages Delivered 
 
 A lower efficiency value indicates a lower average travel distance per delivered package. The report uses this metric when identifying the best-performing agent.
 
 ### Validation Check
 
 The system verifies that:\
-Total Delivered Packages = Total Input Packages \
+Total Delivered Packages = Total Input Packages 
 
 This helps ensure that no package is lost during assignment or simulation.
 
----
 
 ## Assumptions
 
