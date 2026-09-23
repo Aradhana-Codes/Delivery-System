@@ -17,7 +17,6 @@ The objective of this project is to build a system that can:
 - Assign each package to the nearest delivery agent.
 - Simulate the delivery journey.
 - Calculate the total distance traveled by each agent.
-- Track the route of every delivered package.
 - Calculate agent efficiency.
 - Identify the best-performing agent.
 - Generate a structured JSON report.
