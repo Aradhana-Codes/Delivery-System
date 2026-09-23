@@ -22,6 +22,16 @@ The objective of this project is to build a system that can:
 
 This project demonstrates practical applications of Python programming, data validation, distance calculation, algorithmic assignment, and simulation.
 
+## Project Structure
+1. Test_Cases/ : Contains additional test input files used to verify the delivery system
+                 with different scenarios.
+2. Python Assignment(Delivery System).pdf : Contains the assignment requirements and problem statement.
+3. README.md : Provides project documentation, assumptions, file descriptions, and working of project.
+4.  base_case.json : Contains the sample input data, including warehouses, agents, and packages for the base test case.
+5.  data.json : Contains the input data used for running the delivery simulation. The program reads this file and processes the delivery details.
+6.  main.py : Main Python program
+7.  report.json : Contains the generated output report, including the number of packages delivered, total distance, efficiency, and best agent.
+   
 ## Features
 
 ### 1. JSON Data Processing
