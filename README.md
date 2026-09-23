@@ -22,7 +22,6 @@ The objective of this project is to build a system that can:
 
 This project demonstrates practical applications of Python programming, data validation, distance calculation, algorithmic assignment, and simulation.
 
-
 ## Features
 
 ### 1. JSON Data Processing
@@ -44,24 +43,9 @@ If two agents have the same distance, a deterministic tie-breaking rule is used 
 The system simulates the delivery journey for every assigned package:\
  Agent's Current Location -> Package Warehouse -> Destination
 
-
 After delivering a package, the agent's current location is updated to the destination of that package.
 
-### 4. Route Tracking
-
-The system records the route for every package, including:
-
-- Package ID
-- Agent ID
-- Starting location
-- Warehouse ID
-- Warehouse location
-- Destination
-- Distance from agent to warehouse
-- Distance from warehouse to destination
-- Total distance for the package
-
-### 5. Performance Report
+### 4. Performance Report
 
 The generated report contains:
 - Number of packages delivered by each agent
@@ -70,7 +54,7 @@ The generated report contains:
 - Average distance per delivered package
 - Best-performing agent based on delivery efficiency
 
-### 6. Data Validation
+### 5. Data Validation
 
 The system validates:
 
